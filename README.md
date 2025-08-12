@@ -1,8 +1,18 @@
 # projeto-integrador-ii
-Este projeto envolve todos os alunos de quaisquer trilhas. Neste momento, os alunos já terão cursado disciplinas específicas e, por isto, existem itens opcionais que devem ser explorados quando alunos destas trilhas estiverem nos grupos.
+## TEMA: Portal de Conteúdo
+### GRUPO - DRP01-PJI240-SALA-003GRUPO-019
 
+Este projeto envolve alunos do eixo da Computação da Universidade __UNIVESP__.
 
-## CRIANDO UM AMBIENTE VIRTUAL NA VISUAL STUDIO CODE `venv`
+#### DESAFIO
+
+Desenvolvimento web, construir websites funcionais e disponibilizá-los na nuvem para poderem ser acessados por qualquer pessoa em qualquer lugar do mundo. Incluir algumas funcionalidades importantes que serão vistas ao longo do semestre, como:
+- acessibilidade
+- linguagens de script
+- nuvem
+- etc
+
+## :tada: CRIANDO UM AMBIENTE VIRTUAL NA VISUAL STUDIO CODE `venv`
 
 <details><summary>Como criar uma ambiente virtual VENV</summary>
 
@@ -133,6 +143,87 @@ python manage.py runserver
 Agora, abra seu navegador e acesse o endereço [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Se tudo deu certo, você verá a página de boas-vindas do Django, indicando que seu projeto foi criado com sucesso.
 
 :clap: Pronto! Seu projeto __Django__ está configurado e pronto para você começar a ser desenvolvido.
+
+<details><summary>Crie um Aplicativo Django</summary>
+
+- Projetos `Django` são divididos em "**aplicativos**". É uma boa prática criar um aplicativo para cada funcionalidade principal do seu site.<br>
+`OBS: Certifique-se de que sua venv esteja ativada e que você esteja no diretório raiz do seu projeto (onde está o manage.py). Isso criará uma nova pasta chamada core (ou o nome que você escolher para seu aplicativo) dentro do seu projeto.`
+
+~~~Bash
+python manage.py startapp core
+~~~
+
+- Registre o Aplicativo, após criar o aplicativo, você precisa registrá-lo no seu projeto Django. Abra o arquivo nome_do_seu_projeto/settings.py (dentro da pasta principal do seu projeto). Procure a lista INSTALLED_APPS e adicione o nome do seu aplicativo ('core') a ela.
+
+~~~Python
+# nome_do_seu_projeto/settings.py
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'core',  # Adicione esta linha
+]
+~~~
+
+- Crie a View (Lógica da Página).
+`OBS: A view é uma função Python que recebe uma requisição web e retorna uma resposta web. Abra o arquivo core/views.py. Adicione o seguinte código para criar uma view que retorna "Hello World".`
+
+~~~Python
+# core/views.py
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello World!")
+~~~
+
+-  Defina as URLs do Aplicativo
+`OBS: Agora você precisa dizer ao Django qual URL deve ser mapeada para a sua view home. Dentro da pasta core, crie um novo arquivo chamado urls.py. Adicione o seguinte código a core/urls.py`<br>
+`path('', views.home, name='home'): Este é o mapeamento. O '' indica uma URL vazia, ou seja, a raiz do seu aplicativo. Quando alguém acessa essa URL, a função views.home será chamada. name='home' é um nome opcional para esta URL, útil para referenciá-la em outras partes do seu código Django.`
+
+~~~Python
+# core/urls.py
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]
+~~~
+
+- Inclua as URLs do Aplicativo no Projeto Principal
+`OBS: Por fim, você precisa incluir as URLs do seu aplicativo (core/urls.py) no arquivo de URLs principal do seu projeto. Abra o arquivo nome_do_seu_projeto/urls.py (o arquivo principal, não o do seu aplicativo core). Adicione a função include e inclua as URLs do seu aplicativo`<br>
+`path('', include('core.urls')): Isso significa que qualquer requisição para a raiz do seu site ('') será "delegada" ao arquivo core/urls.py para ser resolvida`
+
+~~~Python
+# nome_do_seu_projeto/urls.py
+
+from django.contrib import admin
+from django.urls import path, include # Adicione 'include'
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('core.urls')), # Adicione esta linha
+]
+~~~
+
+- Teste Sua Página
+
+~~~Bash
+python manage.py runserver
+~~~
+
+- Abra seu navegador e vá para [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Você deve ver a mensagem "Hello World!" na tela.
+
+:star: Sua primeira página Django está configurada! PARABÉNS!
+
+</details>
 
 </details>
 
