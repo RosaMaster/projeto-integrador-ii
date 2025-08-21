@@ -1,0 +1,48 @@
+<!-- web_page_app/templates/web_page_app/conteudo.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo - Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+    <!-- Header com navegação -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Portal de Conteúdo</h1>
+            <nav>
+                <a href="{% url 'conteudo' %}" class="text-blue-600 font-medium hover:text-blue-500 transition duration-300">Conteúdo</a>
+                <a href="{% url 'politica_termos' %}" class="ml-4 text-slate-600 font-medium hover:text-slate-500 transition duration-300">Termos de Uso</a>
+                <a href="{% url 'logout_view' %}" class="ml-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-300">Sair</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold mb-6">Seu Material em PDF</h2>
+            <p class="text-lg mb-4">Bem-vindo ao portal! Aqui você pode visualizar o material didático exclusivo.</p>
+            
+            <div class="relative w-full h-[600px] bg-slate-200 rounded-lg overflow-hidden mb-6">
+                <!-- iFrame para visualizar o PDF -->
+                <!-- A URL do PDF é passada pela view do Django -->
+                <iframe src="{{ pdf_path }}" class="w-full h-full border-none"></iframe>
+            </div>
+            
+            <div class="flex justify-center">
+                <!-- Link para baixar o PDF -->
+                <a href="{{ pdf_path }}" download class="py-3 px-8 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">
+                    Baixar o Material
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

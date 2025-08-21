@@ -227,6 +227,42 @@ python manage.py runserver
 
 </details>
 
+## :suspect: CREATE SUPER USER
+
+<details><summary>Como criar user admin</summary>
+
+- Execute o comando abaixo:
+
+~~~Bash
+python manage.py createsuperuser
+~~~
+
+- Em seguida informe o nome do super-usuario a ser criado:
+
+Ex: admin
+
+- Informe a senha de acesso desse superuser, será necessário informar duas vezes!
+
+- Abra seu navegador e vá para [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin). Você deve ver a tela de login use o usuario criado "admin" e o "password" cadastrado.
+
+</details>
+
+## EXECUTE APLICAÇÃO
+
+- Sempre executar os camndos abaixo em sequencia:
+
+~~~Bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+~~~
+
+- Abra seu navegador e vá para [http://127.0.0.1:8000](http://127.0.0.1:8000). Você deve ver a tela de login use o usuario criado "admin" e a senha "admin123" cadastrado.
+
+## :suspect: CREATE TEMPLATES COM VIEWS
+
+## :suspect: CREATE TABLES COM MODELS
+
 ## :books: DOCUMENTAÇÃO E LINKS ÚTEIS
 
 | Documentação                                                                                                   |

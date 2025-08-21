@@ -1,0 +1,13 @@
+# web_page_app/urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.login_view, name='login'),
+    path('login/', views.login_view, name='login'),
+    path('cadastro/', views.cadastro_view, name='cadastro'),
+    path('reset-senha/', views.reset_senha_view, name='reset_senha'),
+    path('conteudo/', views.conteudo_view, name='conteudo'),
+    path('politica-termos/', views.politica_termos_view, name='politica_termos'),
+    path('logout/', views.logout_view, name='logout_view'),
+]
