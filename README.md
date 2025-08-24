@@ -270,4 +270,6 @@ python manage.py runserver
 | [Ambientes virtuais em Python](https://www.alura.com.br/artigos/ambientes-virtuais-em-python?utm_term=&utm_campaign=topo-aon-search-gg-dsa-artigos_conteudos&utm_source=google&utm_medium=cpc&campaign_id=11384329873_164240702375_703853654617&utm_id=11384329873_164240702375_703853654617&hsa_acc=7964138385&hsa_cam=topo-aon-search-gg-dsa-artigos_conteudos&hsa_grp=164240702375&hsa_ad=703853654617&hsa_src=g&hsa_tgt=aud-527303763294:dsa-2276348409543&hsa_kw=&hsa_mt=&hsa_net=google&hsa_ver=3&gad_source=1&gad_campaignid=11384329873&gbraid=0AAAAADpqZID_G8Ba9vYHZbPsGcK5Sc753&gclid=Cj0KCQjwqebEBhD9ARIsAFZMbfwdkmn1_ZMTSaenOgbTQ9FBlhgSl8mt40JQoZrRnY2Xdtd0yvulnfQaArkpEALw_wcB) |
 | [Python .gitignore - GitHub](https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore)       |
 | [Django The web framework for perfectionists with deadlines.](https://docs.djangoproject.com/en/5.2/releases/) |
-| []() |
+| [Tailwindcss CSS framework](https://tailwindcss.com/)                                                          |
+| [Bootstrap](https://getbootstrap.com/)                                                                         |
+| [Color Hunt](https://colorhunt.co/)                                                                            |
