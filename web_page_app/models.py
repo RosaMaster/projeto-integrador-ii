@@ -1,6 +1,28 @@
 from django.db import models
 import uuid
 
+
+class Curso(models.Model):
+    nome = models.CharField(primary_key=True, unique=True, max_length=100)
+    nome_abreviado = models.CharField(max_length=50, verbose_name='NomeAbreviado')
+    duracao = models.PositiveIntegerField(verbose_name='Duracao')
+    descricao = models.TextField(verbose_name='Descricao')
+
+    def __str__(self):
+        return self.nome
+
+
+class Usuario(models.Model):
+    registro_academico = models.CharField(primary_key=True, unique=True, max_length=20)
+    nome = models.CharField(max_length=150)
+    email = models.EmailField(unique=True, max_length=150)
+    curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    senha = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.registro_academico
+
+
 class Semana(models.Model):
     semana = models.PositiveIntegerField(primary_key=True, unique=True)
 
@@ -12,7 +34,7 @@ class AnoLetivo(models.Model):
     ano = models.PositiveIntegerField(primary_key=True, unique=True)
 
     class Meta:
-        verbose_name_plural = "AnoLetivo"
+        verbose_name_plural = "Ano Letivo"
 
     def __str__(self):
         return str(self.ano)
