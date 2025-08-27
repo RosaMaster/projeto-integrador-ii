@@ -4,6 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 from django.http import HttpResponse
+from .models import Transacao
+from datetime import datetime
+from .form import TransacaoForm
 
 # View para a página de Login
 def login_view(request):
@@ -52,3 +55,59 @@ def politica_termos_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+
+def teste_view(request):
+    data = {}
+    data['transacoes'] = ['t1', 't2', 't3']
+
+    data['now'] = datetime.now()
+
+    data['all_transacoes'] = Transacao.objects.all()
+
+    form = TransacaoForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        return redirect('teste')
+
+    data['form'] = form
+
+    return render(request, 'web_page_app/teste.html', data)
+
+
+# def nova_transacao(request):
+#     data = {}
+    
+#     form = TransacaoForm()
+
+#     data['form'] = form
+
+#     return render(request, 'web_page_app/teste.html', data)
+
+
+def teste_update(request, pk):
+    data = {}
+
+    transacao = Transacao.objects.get(pk=pk)
+
+    form = TransacaoForm(request.POST or None, instance=transacao)
+
+    if form.is_valid():
+        form.save()
+        return redirect('teste')
+
+    data['form'] = form
+    data['transacao'] = transacao
+
+    return render(request, 'web_page_app/teste_update.html', data)
+
+
+def teste_delete(request, pk):
+
+    transacao = Transacao.objects.get(pk=pk)
+
+    transacao.delete()
+
+    return redirect('teste')
+
