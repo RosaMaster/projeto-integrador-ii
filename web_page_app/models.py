@@ -1,5 +1,4 @@
 from django.db import models
-import uuid
 
 
 class Curso(models.Model):
@@ -12,12 +11,17 @@ class Curso(models.Model):
         return self.nome
 
 
-class Usuario(models.Model):
+class Consumidor(models.Model):
     registro_academico = models.CharField(primary_key=True, unique=True, max_length=20)
     nome = models.CharField(max_length=150)
     email = models.EmailField(unique=True, max_length=150)
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
     senha = models.CharField(max_length=30)
+    data_insercao = models.DateTimeField(auto_now_add=True)
+    data_atualizacao = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name_plural = "Consumidores"
 
     def __str__(self):
         return self.registro_academico

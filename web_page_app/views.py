@@ -6,7 +6,7 @@ from django.contrib.auth import login, logout
 from django.http import HttpResponse
 from .models import Transacao
 from datetime import datetime
-from .form import TransacaoForm
+from .form import TransacaoForm, CadastroConsumidorForm
 
 # View para a página de Login
 def login_view(request):
@@ -23,15 +23,18 @@ def login_view(request):
 
 # View para a página de Cadastro
 def cadastro_view(request):
+    data = {}
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CadastroConsumidorForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)
-            return redirect('conteudo')
+            return redirect('login')
     else:
-        form = UserCreationForm()
-    return render(request, 'web_page_app/cadastro.html', {'form': form})
+        form = CadastroConsumidorForm()
+
+    data['form'] = form
+
+    return render(request, 'web_page_app/cadastro.html', data)
 
 
 # View para a página de Reset de Senha (simplificada)
@@ -111,3 +114,8 @@ def teste_delete(request, pk):
 
     return redirect('teste')
 
+def template_view(request):
+    data = {}
+    data['now'] = datetime.now()
+
+    return render(request, 'web_page_app/template.html')

@@ -1,0 +1,28 @@
+<!-- web_page_app/templates/web_page_app/conteudo.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPLATE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Ariel', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+    <!-- Header com navegação -->
+    <header class="bg-purple-400 shadow-sm py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Incluir imagem de logo -->
+            <img src="./image/logo-com-texto.png" alt="Logo" class="h-10">
+            <h1 class="text-2xl font-bold">Portal de Conteúdo</h1>
+            <nav>
+                <a href="{% url 'conteudo' %}" class="text-blue-600 font-medium hover:text-blue-500 transition duration-300"><b>CONTEÚDO</b></a>
+                <a href="{% url 'politica_termos' %}" class="ml-4 text-slate-600 font-medium hover:text-slate-500 transition duration-300"><b>TERMOS DE USO</b></a>
+                <a href="{% url 'logout_view' %}" class="ml-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-300"><b>LOGOUT</b></a>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
