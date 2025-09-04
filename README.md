@@ -273,3 +273,4 @@ python manage.py runserver
 | [Tailwindcss CSS framework](https://tailwindcss.com/)                                                          |
 | [Bootstrap](https://getbootstrap.com/)                                                                         |
 | [Color Hunt](https://colorhunt.co/)                                                                            |
+| [Paleta de Core Lívia](https://colorhunt.co/palette/52357b5459ac648db3b2d8ce)                                  |
