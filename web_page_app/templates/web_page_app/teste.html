@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+</head>
+<body>
+    <p>TESTE</p>
+
+    <p>Agora são: {{ now }}</p>
+
+    <ul>
+    {% for transacao in transacoes %}
+        <li>{{ transacao }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Todas as Transações</h2>
+    <ul>
+    {% for trans in all_transacoes %}
+        <li>{{ trans }}</li>
+        <ul>
+            <li><a href="{% url 'teste_update' trans.id %}">{{ trans.id }}</a></li>
+            <li>Descrição: {{ trans.descricao }}</li>
+            <li>Valor: {{ trans.valor }}</li>
+            <li>Categoria: {{ trans.categoria }}</li>
+            <li>Data: {{ trans.data }}</li>
+            <li>Observações: {{ trans.observacoes }}</li>
+        </ul>
+    {% endfor %}
+
+    <h2>Formulário de Transação</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">SAVE</button>
+    </form>
+
+</body>
+</html>
