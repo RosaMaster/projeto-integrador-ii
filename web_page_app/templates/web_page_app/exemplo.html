@@ -14,25 +14,25 @@
     </style>
 </head>
 <body>
-    <header class="shadow-sm py-1 mb-1" style="background-color: rgba(34, 40, 49, 1.0);">
+    <header class="bg-black shadow-sm py-1 mb-1">
         <div class="container d-flex justify-content-between align-items-center">
             <!-- Incluir imagem de logo -->
             <div class="d-flex align-items-center gap-2">
                 <a href="{% url 'template' %}" class="text-decoration-none text-primary me-3">
                     <img src="{% static 'web_page_app/image/Logo01_sem_fundo.png' %}" alt="Logo sem texto" style="width:150px; height:150px; object-fit:contain; background:transparent; margin-right:10px;">
                 </a>
-                <h1 class="h3 mb-0 text-white" style="font-size: xxx-large;"><b>A R C H I V U M</b></h1>
+                <h1 class="h3 mb-0 text-white">A R C H I V U M</h1>
             </div>
             <nav>
                 <a href="{% url 'template' %}" class="text-decoration-none text-primary me-3"><b>HOME</b></a>
-                <a href="{% url 'politica_termos' %}" class="text-decoration-none text-secondary me-3"><b>TERMOS DE USO</b></a>
+                <a href="{% url 'politica_termos' %}" class="text-decoration-none text-primary me-3"><b>TERMOS DE USO</b></a>
                 <a href="{% url 'logout_view' %}" class="btn btn-danger"><b>LOGOUT</b></a>
             </nav>
         </div>
     </header>
-    <div class="marquee-container" style="background-color: rgba(34, 40, 49, 1.0);">
+    <div class="marquee-container" style="background-color: rgba(82, 53, 123, 0.8);">
         <div class="marquee-text h6 mb-0 text-white">
-            BEM VINDOS AO PORTAL DE CONTEÚDO FEITO POR ALUNOS PARA ALUNOS UNIVESP! BONS ESTUDOS!
+            BEM VINDOS AO PORTAL DE CONTEÚDO FEITO POR ALUNOS PARA ALUNOS UNIVESP!
         </div>
     </div>
     <br>
@@ -55,9 +55,9 @@
     }
     </style>
     <footer class="bg-light text-center text-lg-start mt-4">
-        <div class="text-center p-3 text-white" style="background-color: rgba(34, 40, 49, 1.0);">
-            © 2025 Copyright
-            <a class="text-white" href="https://univesp.br/">UNIVESP</a>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2025 Copyright:
+            <a class="text-dark" href="https://univesp.br/">UNIVESP</a>
         </div>
     </footer>
     
