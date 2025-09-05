@@ -1,18 +1,25 @@
 <!-- web_page_app/templates/web_page_app/login.html -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Portal</title>
+    <link rel="icon" type="image/png" href="{% static 'web_page_app/image/Logo01.png' %}">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm">
+<body>
+    <div>
+        <a href="{% url 'template' %}" class="flex items-center justify-center">
+            <img src="{% static 'web_page_app/image/Logo01_sem_fundo.png' %}" alt="Logo sem texto" style="width:300px; height:300px; object-fit:contain; background:transparent; margin-right:10px;">
+        </a>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm mx-auto">
         <h1 class="text-3xl font-bold text-center text-slate-800 mb-6">Login</h1>
         <form method="post" class="space-y-4">
             {% csrf_token %}

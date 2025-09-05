@@ -8,7 +8,6 @@
     <title>TEMPLATE</title>
     <link rel="icon" type="image/png" href="{% static 'web_page_app/image/Logo01.png' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!--<script src="https://cdn.tailwindcss.com"></script>-->
     <style>
         body { font-family: 'Ariel', sans-serif; }
     </style>
@@ -16,6 +15,7 @@
 <body>
     <header class="shadow-sm py-1 mb-1" style="background-color: rgba(34, 40, 49, 1.0);">
         <div class="container d-flex justify-content-between align-items-center">
+
             <!-- Incluir imagem de logo -->
             <div class="d-flex align-items-center gap-2">
                 <a href="{% url 'template' %}" class="text-decoration-none text-primary me-3">
@@ -23,10 +23,10 @@
                 </a>
                 <h1 class="h3 mb-0 text-white" style="font-size: xxx-large;"><b>A R C H I V U M</b></h1>
             </div>
-            <nav>
+            <nav  style="font-size: 1.35rem;">
                 <a href="{% url 'template' %}" class="text-decoration-none text-primary me-3"><b>HOME</b></a>
                 <a href="{% url 'politica_termos' %}" class="text-decoration-none text-secondary me-3"><b>TERMOS DE USO</b></a>
-                <a href="{% url 'logout_view' %}" class="btn btn-danger"><b>LOGOUT</b></a>
+                <a href="{% url 'logout_view' %}" class="btn btn-danger" style="font-size: 1.1rem;"><b>LOGOUT</b></a>
             </nav>
         </div>
     </header>
@@ -35,8 +35,22 @@
             BEM VINDOS AO PORTAL DE CONTEÚDO FEITO POR ALUNOS PARA ALUNOS UNIVESP! BONS ESTUDOS!
         </div>
     </div>
-    <br>
-    <h1>Hello, world!</h1>
+    <div class="container mt-4">
+        <br>
+        <h3>Hello, world!</h3>
+        <br>
+        <p>Este é um template base. Substitua este conteúdo pelo conteúdo real da sua página.</p>
+        <br>
+        <p>Conteúdo adicional pode ser adicionado aqui.</p>
+        <br>
+        <p>Mais conteúdo para preencher a página.</p>
+        <br>
+        <p>Continue adicionando o conteúdo necessário.</p>
+        <br>
+        <p>Este é apenas um exemplo de template.</p>
+        <br>
+        <p>Adicione seções conforme necessário.</p>
+    </div>
 
     <style>
     .marquee-container {
@@ -54,13 +68,44 @@
     100% { transform: translateX(-100%); }
     }
     </style>
-    <footer class="bg-light text-center text-lg-start mt-4">
-        <div class="text-center p-3 text-white" style="background-color: rgba(34, 40, 49, 1.0);">
-            © 2025 Copyright
-            <a class="text-white" href="https://univesp.br/">UNIVESP</a>
+    
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>LINKS ÚTEIS</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.univesp.br/" class="text-white text-decoration-none" target="_blank">UNIVESP</a></li>
+                        <li><a href="https://moodle.univesp.br/" class="text-white text-decoration-none" target="_blank">Moodle UNIVESP</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>RECURSOS EXTERNOS</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/" class="text-white text-decoration-none" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.python.org/" class="text-white text-decoration-none" target="_blank">Python.org</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>RECURSOS INTERNO</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://gitlab.com/" class="text-white text-decoration-none" target="_blank">Gitlab</a></li>
+                        <li><a href="https://www.djangoproject.com/" class="text-white text-decoration-none" target="_blank">Django</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>RECURSOS INTERNO</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://gitlab.com/" class="text-white text-decoration-none" target="_blank">Gitlab</a></li>
+                        <li><a href="https://www.djangoproject.com/" class="text-white text-decoration-none" target="_blank">Django</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 text-white">
+            <b>A R C H I V U M</b> © 2025 Copyright
         </div>
     </footer>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
