@@ -274,3 +274,4 @@ python manage.py runserver
 | [Bootstrap](https://getbootstrap.com/)                                                                         |
 | [Color Hunt](https://colorhunt.co/)                                                                            |
 | [Paleta de Core Lívia](https://colorhunt.co/palette/52357b5459ac648db3b2d8ce)                                  |
+| [Sobre os conjuntos de regras](https://docs.github.com/pt/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) |
