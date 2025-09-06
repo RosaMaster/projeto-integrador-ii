@@ -9,6 +9,7 @@ urlpatterns = [
     path('teste_delete/<int:pk>/', views.teste_delete, name='teste_delete'),
     #path('', views.login_view, name='login'),
     path('login/', views.login_view, name='login'),
+    path('home/', views.home_view, name='home'),
     path('cadastro/', views.cadastro_view, name='cadastro'),
     path('reset-senha/', views.reset_senha_view, name='reset_senha'),
     path('conteudo/', views.conteudo_view, name='conteudo'),
