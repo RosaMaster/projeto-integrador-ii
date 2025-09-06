@@ -20,6 +20,12 @@ def login_view(request):
         form = AuthenticationForm()
     return render(request, 'web_page_app/login.html', {'form': form})
 
+# View para a página de Cadastro
+def home_view(request):
+    data = {}
+
+    return render(request, 'web_page_app/home.html', data)
+
 
 # View para a página de Cadastro
 def cadastro_view(request):
