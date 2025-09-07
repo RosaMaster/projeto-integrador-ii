@@ -45,10 +45,11 @@ class AnoLetivo(models.Model):
 
 
 class Disciplina(models.Model):
-    codigo = models.CharField(primary_key=True, unique=True, max_length=10)         # Código único da disciplina
-    nome = models.CharField(max_length=100)                                         # Nome da disciplina
-    carga_horaria = models.PositiveIntegerField(verbose_name='Carga Horaria')       # Carga horária da disciplina
-    descricao = models.TextField(verbose_name='Descricao')                          # Descrição da disciplina
+    codigo = models.CharField(primary_key=True, unique=True, max_length=10)                             # Código único da disciplina
+    nome = models.CharField(max_length=100)                                                             # Nome da disciplina
+    carga_horaria = models.PositiveIntegerField(verbose_name='Carga Horaria')                           # Carga horária da disciplina
+    descricao = models.TextField(verbose_name='Descricao')                                              # Descrição da disciplina
+    quantidade_aulas_semanais = models.PositiveIntegerField(verbose_name='Quantidade Aulas Semanais')   # Quantidade de aulas semanais
 
     def __str__(self):
         return self.nome
