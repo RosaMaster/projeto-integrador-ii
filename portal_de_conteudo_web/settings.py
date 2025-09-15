@@ -59,6 +59,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.csrf',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -99,6 +100,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1:8000',
+    'http://localhost:8000',
+]
+
+AUTHENTICATION_BACKENDS = [
+    'web_page_app.backends.ConsumidorBackend',         # nosso backend (Consulta Consumidor)
+    'django.contrib.auth.backends.ModelBackend',       # padrão do Django (admin etc.)
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
