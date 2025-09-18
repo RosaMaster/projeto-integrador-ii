@@ -12,6 +12,14 @@ Desenvolvimento web, construir websites funcionais e disponibilizá-los na nuvem
 - nuvem
 - etc
 
+#### DISCIPLINAS
+
+- [__Fundamentos Matemáticos__](./web_page_app/static/web_page_app/pdf/fundamentos_matematicos/fundamentos_matematicos.md)
+
+- [__Inglês__](./web_page_app/static/web_page_app/pdf/ingles/ingles.md)
+
+- [__Pensamento Computacional__](./web_page_app/static/web_page_app/pdf/pensamento_computacional/pensamento_computacional.md)
+
 ## :tada: CRIANDO UM AMBIENTE VIRTUAL NA VISUAL STUDIO CODE `venv`
 
 <details><summary>Como criar uma ambiente virtual VENV</summary>

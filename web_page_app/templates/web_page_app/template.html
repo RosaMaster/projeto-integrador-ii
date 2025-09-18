@@ -36,24 +36,32 @@
         <!-- Dividir essa sessao em 2 partes menu lateral esquerdo, arquivo pdf centro -->
         <div class="d-flex">
             <div class="flex-shrink-0 p-3 bg-white" style="width: 280px; height: 600px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <!-- Adicionar caixa de seleção para selecionar o arquivo PDF -->
-                <div class="form-group">
-                    <label for="materialSelect">Selecione um material:</label>
-                    <select class="form-control" id="materialSelect">
-                        <option value="material1">Aula 1</option>
-                        <option value="material2">Aula 2</option>
-                        <option value="material3">Aula 3</option>
+                <div class="form-group mb-3">
+                    <label for="disciplinaSelect"><b>Selecione a disciplina:</b></label>
+                    <select class="form-control" id="disciplinaSelect">
+                        <option value="default">Escolha uma Disciplina</option>
+                        <option value="fundamentos_matematicos">Fundamentos Matemáticos</option>
+                        <option value="ingles">Inglês</option>
+                        <option value="pensamento_computacional">Pensamento Computacional</option>
                     </select>
                 </div>
-                <br>
+                <div class="form-group">
+                    <label for="aulaSelect"><b>Selecione a aula:</b></label>
+                    <select class="form-control" id="aulaSelect">
+                        <option value="aula1">Aula 1</option>
+                        <option value="aula2">Aula 2</option>
+                        <option value="aula3">Aula 3</option>
+                    </select>
+                </div>
+                <br><br>
                 <div>
-                    <a id="pdfLink" href="{% static 'web_page_app/pdf/Aula01.pdf' %}" target="_blank" class="btn btn-warning" style="font-size: 1.1rem;"><b>Abrir PDF</b></a>
+                    <a id="pdfLink" href="{% static 'web_page_app/pdf/fundamentos_matematicos/aula1.pdf' %}" target="_blank" class="btn btn-warning" style="font-size: 1.1rem;"><b>Abrir PDF</b></a>
                     <br><br>
                     <a id="pdfLink" href="https://www.youtube.com/watch?v=KxppXrcfMBA" target="_blank" class="btn btn-warning" style="font-size: 1.1rem;"><b>Abrir VÍDEO</b></a>
                 </div>
             </div>
             <div class="mt-6" style="width: 1000px; height: 150px;">
-                <embed id="pdfEmbed" src="{% static 'web_page_app/pdf/Aula01.pdf' %}" type="application/pdf" width="110%" height="600px" />
+                <embed id="pdfEmbed" src="{% static 'web_page_app/pdf/fundamentos_matematicos/aula1.pdf' %}" type="application/pdf" width="110%" height="600px" />
             </div>
         </div>
     </div>
@@ -86,24 +94,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <script>
-    // Mapeamento dos valores do select para os arquivos PDF
     const pdfMap = {
-        'material1': "{% static 'web_page_app/pdf/Aula01.pdf' %}",
-        'material2': "{% static 'web_page_app/pdf/Aula02.pdf' %}",
-        'material3': "{% static 'web_page_app/pdf/Aula03.pdf' %}"
+        fundamentos_matematicos: {
+            aula1: "{% static 'web_page_app/pdf/fundamentos_matematicos/Aula1.pdf' %}",
+            aula2: "{% static 'web_page_app/pdf/fundamentos_matematicos/Aula2.pdf' %}",
+            aula3: "{% static 'web_page_app/pdf/fundamentos_matematicos/Aula3.pdf' %}"
+        },
+        ingles: {
+            aula1: "{% static 'web_page_app/pdf/ingles/Aula1.pdf' %}",
+            aula2: "{% static 'web_page_app/pdf/ingles/Aula2.pdf' %}",
+            aula3: "{% static 'web_page_app/pdf/ingles/Aula3.pdf' %}"
+        },
+        pensamento_computacional: {
+            aula1: "{% static 'web_page_app/pdf/pensamento_computacional/Aula1.pdf' %}",
+            aula2: "{% static 'web_page_app/pdf/pensamento_computacional/Aula2.pdf' %}",
+            aula3: "{% static 'web_page_app/pdf/pensamento_computacional/Aula3.pdf' %}"
+        }
     };
-    const select = document.getElementById('materialSelect');
+    const disciplinaSelect = document.getElementById('disciplinaSelect');
+    const aulaSelect = document.getElementById('aulaSelect');
     const pdfLink = document.getElementById('pdfLink');
     const pdfEmbed = document.getElementById('pdfEmbed');
-    if (select && pdfLink && pdfEmbed) {
-        select.addEventListener('change', function() {
-            const value = select.value;
-            const pdfUrl = pdfMap[value];
-            if (pdfUrl) {
-                pdfLink.href = pdfUrl;
-                pdfEmbed.src = pdfUrl;
-            }
-        });
+    function updatePdf() {
+        const disciplina = disciplinaSelect.value;
+        const aula = aulaSelect.value;
+        const pdfUrl = pdfMap[disciplina][aula];
+        if (pdfUrl) {
+            pdfLink.href = pdfUrl;
+            pdfEmbed.src = pdfUrl;
+        }
+    }
+    if (disciplinaSelect && aulaSelect && pdfLink && pdfEmbed) {
+        disciplinaSelect.addEventListener('change', updatePdf);
+        aulaSelect.addEventListener('change', updatePdf);
     }
     </script>
 
