@@ -7,30 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLÍTICA E TERMOS DE USO</title>
     <link rel="icon" type="image/png" href="{% static 'web_page_app/image/Logo01.png' %}">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'web_page_app/css/global.css' %}">
 </head>
-<!--
-<body class="bg-slate-50 text-slate-800 min-h-screen p-8">-->
-<body class="bg-slate-50 text-slate-800 min-h-screen">
+<body>
 
-    <!-- Header com navegação -->
-    <header class="bg-white shadow-sm py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Portal de Conteúdo</h1>
-            <nav>
-                <a href="{% url 'conteudo' %}" class="text-blue-600 font-medium hover:text-blue-500 transition duration-300"><b>CONTEÚDO</b></a>
-                <a href="{% url 'politica_termos' %}" class="ml-4 text-slate-600 font-medium hover:text-slate-500 transition duration-300"><b>TERMOS DE USO</b></a>
-                <a href="{% url 'logout_view' %}" class="ml-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-300"><b>LOGOUT</b></a>
+    <!-- HEADER -->
+    <header class="shadow-sm py-0 mb-1" style="background-color: rgba(34, 40, 49, 1.0); border-width: 1px; border-style: solid; border-color: #222831;">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!-- Incluir imagem de logo -->
+            <div class="d-flex align-items-center gap-2">
+                <a href="{% url 'conteudo' %}" class="text-decoration-none text-primary me-3">
+                    <img src="{% static 'web_page_app/image/Logo01_sem_fundo.png' %}" alt="Logo sem texto" style="width:150px; height:150px; object-fit:contain; background:transparent; margin-right:10px;">
+                </a>
+                <h1 class="h3 mb-0 text-white" style="font-size: xxx-large;"><b>A R C H I V U M</b></h1>
+            </div>
+            <nav  style="font-size: 1.35rem;">
+                <a href="{% url 'home' %}" class="text-decoration-none text-primary me-3"><b>HOME</b></a>
+                <a href="{% url 'conteudo' %}" class="text-decoration-none text-secondary me-3"><b>CONTEÚDO</b></a>
+                <a href="{% url 'politica_termos' %}" class="text-decoration-none text-secondary me-3"><b>TERMOS DE USO</b></a>
+                <a href="{% url 'logout_view' %}" class="btn btn-danger" style="font-size: 1.1rem;"><b>LOGOUT</b></a>
             </nav>
         </div>
     </header>
 
-    <div class="container mx-auto max-w-3xl bg-white p-8 rounded-2xl shadow-xl">
+    <div class="container mx-auto max-w-3xl bg-white p-8 rounded-2xl shadow-xl"><br>
 
         <h1 class="text-3xl font-bold mb-6 text-center">POLÍTICA E TERMOS DE USO</h1>
 
-        <p class="text-sm text-slate-600 text-center mb-8">Última atualização: 24 de Agosto de 2025</p>
+        <p class="text-sm text-slate-600 text-center mb-8">Última atualização: 18 de Setembro de 2025</p>
         
         <section class="mb-6">
             <h2 class="text-xl font-semibold mb-2">1.0 INFO</h2>
@@ -125,15 +131,22 @@
         </section>
 
         <div class="mt-8 text-center">
-            <a href="{% url 'conteudo' %}" class="inline-block px-6 py-2 border border-slate-300 rounded-md text-slate-600 hover:bg-slate-100 transition duration-300">Voltar a página Principal</a>
+            <nav  style="font-size: 3.35rem;">
+                <a href="{% url 'home' %}" class="btn btn-dark" style="font-size: 1.1rem;"><b>HOME</b></a>
+            </nav>
         </div>
 
     </div>
-    <footer class="bg-white border-t border-slate-200">
-        <div class="max-w-6xl mx-auto py-4">
-            <p class="text-center text-sm text-slate-500">© 2025 Portal de Conteúdo. Todos os direitos reservados.</p>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="text-center p-3 text-white">
+            <b>A R C H I V U M</b> © 2025 Copyright
         </div>
     </footer>
+
+    <!-- SCRIPT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>
