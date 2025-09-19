@@ -2,7 +2,9 @@
 ## TEMA: A R C H I V U M
 ### GRUPO - DRP01-PJI240-SALA-003GRUPO-019
 
-Este projeto envolve alunos do eixo da Computação da Universidade __UNIVESP__.
+Este projeto envolve alunos do eixo da Computação da Universidade __UNIVESP__.<br>
+
+---
 
 ### ÍNDICE
 

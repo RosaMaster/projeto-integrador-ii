@@ -18,58 +18,71 @@
 
             <!-- Incluir imagem de logo -->
             <div class="d-flex align-items-center gap-2">
-                <a href="{% url 'template' %}" class="text-decoration-none text-primary me-3">
+                <a href="{% url 'conteudo' %}" class="text-decoration-none text-primary me-3">
                     <img src="{% static 'web_page_app/image/Logo01_sem_fundo.png' %}" alt="Logo sem texto" style="width:150px; height:150px; object-fit:contain; background:transparent; margin-right:10px;">
                 </a>
                 <h1 class="h3 mb-0 text-white" style="font-size: xxx-large;"><b>A R C H I V U M</b></h1>
             </div>
             <nav  style="font-size: 1.35rem;">
                 <a href="{% url 'home' %}" class="text-decoration-none text-primary me-3"><b>HOME</b></a>
-                <a href="{% url 'template' %}" class="text-decoration-none text-primary me-3"><b>CONTEÚDO</b></a>
+                <a href="{% url 'conteudo' %}" class="text-decoration-none text-secondary me-3"><b>CONTEÚDO</b></a>
                 <a href="{% url 'politica_termos' %}" class="text-decoration-none text-secondary me-3"><b>TERMOS DE USO</b></a>
                 <a href="{% url 'logout_view' %}" class="btn btn-danger" style="font-size: 1.1rem;"><b>LOGOUT</b></a>
             </nav>
         </div>
     </header>
+
     <div class="marquee-container" style="background-color: rgba(34, 40, 49, 1.0);">
         <div class="marquee-text h6 mb-0 text-white">
-            BEM VINDOS AO PORTAL DE CONTEÚDO FEITO POR ALUNOS PARA ALUNOS UNIVESP! BONS ESTUDOS!
+            BEM VINDOS AO ARCHIVUM FEITO POR ALUNOS PARA ALUNOS UNIVESP! BONS ESTUDOS!
         </div>
     </div>
     <div class="container mt-2 mb-5">
-        <!-- Dividir essa sessao em 2 partes menu lateral esquerdo, arquivo pdf centro -->
-        <div class="d-flex">
-            <div class="flex-shrink-0 p-3 bg-white" style="width: 280px; height: 600px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <h5 class="mb-3">MENU</h5>
-                <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link active" aria-current="page">
-                            Início
-                        </a>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link text-dark">
-                            Materiais
-                        </a>
-                    </li>
-                </ul>
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="p-3 bg-white h-100" style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h5 class="mb-4"><b>ÍNDICE</b></h5>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link active" aria-current="page">
+                                <b>Sobre o Projeto</b>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link active" aria-current="page">
+                                <b>Objetivo</b>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link active" aria-current="page">
+                                <b>Resultados Esperados</b>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link active" aria-current="page">
+                                <b>Equipe</b>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="mt-6" style="width: 1000px; height: 150px;">
-                <div>
+            <div class="col-12 col-md-8">
+                <div class="mb-4">
                     <h1>Sobre o Projeto</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec facilisis enim urna at velit. Proin ac neque nec erat cursus dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer euismod, justo at facilisis cursus, enim erat dictum urna, nec dictum enim enim nec urna. Suspendisse potenti. Mauris euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec facilisis enim urna at velit.</p>
                 </div>
-                <div>
+                <div class="mb-4">
                     <h1>Objetivo</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec facilisis enim urna at velit. Proin ac neque nec erat cursus dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer euismod, justo at facilisis cursus, enim erat dictum urna, nec dictum enim enim nec urna. Suspendisse potenti. Mauris euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec facilisis enim urna at velit.</p>
                 </div>
-                <div>
+                <div class="mb-4">
                     <h1>Resultados Esperados</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec facilisis enim urna at velit. Proin ac neque nec erat cursus dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer euismod, justo at facilisis cursus, enim erat dictum urna, nec dictum enim enim nec urna. Suspendisse potenti. Mauris euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec facilisis enim urna at velit.</p>
                 </div>
-                <div>
+                <div class="mb-4">
                     <h1>Equipe</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec facilisis enim urna at velit. Proin ac neque nec erat cursus dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer euismod, justo at facilisis cursus, enim erat dictum urna, nec dictum enim enim nec urna. Suspendisse potenti. Mauris euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec facilisis enim urna at velit.</p>
+                </div>
             </div>
         </div>
     </div>
