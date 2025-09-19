@@ -125,3 +125,9 @@ def template_view(request):
     data['now'] = datetime.now()
 
     return render(request, 'web_page_app/template.html')
+
+def template2_view(request):
+    data = {}
+    data['now'] = datetime.now()
+
+    return render(request, 'web_page_app/template2.html')

@@ -1,8 +1,22 @@
 # projeto-integrador-ii
-## TEMA: Portal de Conteúdo
+## TEMA: A R C H I V U M
 ### GRUPO - DRP01-PJI240-SALA-003GRUPO-019
 
-Este projeto envolve alunos do eixo da Computação da Universidade __UNIVESP__.
+Este projeto envolve alunos do eixo da Computação da Universidade __UNIVESP__.<br>
+
+---
+
+### ÍNDICE
+
+1. [DESAFIO](#desafio)
+2. [DISCIPLINAS](#disciplinas)
+3. [CRIANDO UM AMBIENTE VIRTUAL NA VISUAL STUDIO CODE `venv`](#tada-criando-um-ambiente-virtual-na-visual-studio-code-venv)
+4. [INSTALANDO E EXECUTANDO DJANGO REST FRAMEWORK](#rocket-instalando-e-executando-django-rest-framework)
+5. [CREATE SUPER USER](#suspect-create-super-user)
+6. [EXECUTE APLICAÇÃO](#execute-aplicação)
+7. [CREATE TEMPLATES COM VIEWS](#suspect-create-templates-com-views)
+
+---
 
 #### DESAFIO
 
@@ -10,11 +24,19 @@ Desenvolvimento web, construir websites funcionais e disponibilizá-los na nuvem
 - acessibilidade
 - linguagens de script
 - nuvem
-- etc
+- etc<br>
+
+#### DISCIPLINAS
+
+- [__Fundamentos Matemáticos__](./web_page_app/static/web_page_app/pdf/fundamentos_matematicos/fundamentos_matematicos.md)
+
+- [__Inglês__](./web_page_app/static/web_page_app/pdf/ingles/ingles.md)
+
+- [__Pensamento Computacional__](./web_page_app/static/web_page_app/pdf/pensamento_computacional/pensamento_computacional.md)<br>
 
 ## :tada: CRIANDO UM AMBIENTE VIRTUAL NA VISUAL STUDIO CODE `venv`
 
-<details><summary>Como criar uma ambiente virtual VENV</summary>
+<details><summary>Como criar uma ambiente virtual VENV</summary><br>
 
 #### O que é uma `venv` ?
 
@@ -106,7 +128,7 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ~~~
 
-</details>
+</details><br>
 
 ## :rocket: INSTALANDO E EXECUTANDO DJANGO REST FRAMEWORK
 
@@ -257,11 +279,11 @@ python manage.py migrate
 python manage.py runserver
 ~~~
 
-- Abra seu navegador e vá para [http://127.0.0.1:8000](http://127.0.0.1:8000). Você deve ver a tela de login use o usuario criado "admin" e a senha "admin123" cadastrado.
-
-## :suspect: CREATE TEMPLATES COM VIEWS
+- Abra seu navegador e vá para [http://127.0.0.1:8000](http://127.0.0.1:8000). Você deve ver a tela de login use o usuario criado "admin" e a senha "admin123" cadastrado.<br>
 
 ## :suspect: CREATE TABLES COM MODELS
+
+## :suspect: CREATE TEMPLATES COM VIEWS
 
 ## :books: DOCUMENTAÇÃO E LINKS ÚTEIS
 
@@ -276,3 +298,7 @@ python manage.py runserver
 | [Paleta de Core Lívia](https://colorhunt.co/palette/52357b5459ac648db3b2d8ce)                                  |
 | [Sobre os conjuntos de regras](https://docs.github.com/pt/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) |
 | [Automatize seu fluxo de trabalho da ideia à produção](https://github.com/features/actions?locale=pt-BR)       |
+
+<br>
+
+[**[ INICIO ]**](#projeto-integrador-ii)
