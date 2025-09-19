@@ -33,6 +33,7 @@ Desenvolvimento das estruturas básicas utilizando as habilidades linguísticas 
 - [Aula 15](https://www.youtube.com/watch?v=CqWPZH-MvaU)
 - [Aula 16](https://www.youtube.com/watch?v=YiTF-Z2YE_U)
 - [Aula 17](https://www.youtube.com/watch?v=wWNghFU-OsE)
-- [Aula 18](https://www.youtube.com/watch?v=VnFP1IdWO0E)
-- [Aula 19](https://www.youtube.com/watch?v=Ngu5iPqySmY)
-- [Aula 20](https://www.youtube.com/watch?v=ahx8AqYLxZM)
+
+<br>
+
+[**[ VOLTAR ]**](../../../../../README.md) <===> [**[ INICIO ]**](#inglês)

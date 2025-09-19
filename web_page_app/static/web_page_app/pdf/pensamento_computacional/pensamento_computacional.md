@@ -4,7 +4,7 @@
 >>
 > CARGA HORÁRIA: 80 horas
 >
->> QUANTIDADE AULAS: 00
+>> QUANTIDADE AULAS: 18
 
 ### OBJETIVO
 
@@ -16,23 +16,25 @@ Navegação, pesquisa e filtragem de informações. Interação por meio de tecn
 
 ### AULAS
 
-- Aula 1 - https://www.youtube.com/watch?v=KxppXrcfMBA
-- Aula 2 - https://www.youtube.com/watch?v=O3ABat86ymk
-- Aula 3 - https://www.youtube.com/watch?v=iDHArTzfAHI
-- Aula 4 - https://www.youtube.com/watch?v=hsAIho4XYT4
-- Aula 5 - https://www.youtube.com/watch?v=wBpgFKlTliI
-- Aula 6 - https://www.youtube.com/watch?v=wV__IGMU5M8
-- Aula 7 - https://www.youtube.com/watch?v=SGdD1y2jcPw
-- Aula 8 - https://www.youtube.com/watch?v=xNrOqBs6TIo
-- Aula 9 - https://www.youtube.com/watch?v=5kq749Eg0Q8
-- Aula 14- https://www.youtube.com/watch?v=8kjJCqJF9v8
-- Aula 15- https://www.youtube.com/watch?v=xLbk00136_0
-- Aula 16- https://www.youtube.com/watch?v=jAhuGG-n26E
-- Aula 17- https://www.youtube.com/watch?v=cVLpq0kxPxc
-- Aula 18- https://www.youtube.com/watch?v=SgUUhpDKAP0
-- Aula 19- https://www.youtube.com/watch?v=4G5jvlHSRts
-- Aula 20- https://www.youtube.com/watch?v=ARunwre3W9g
-- Aula 21- https://www.youtube.com/watch?v=jdEXsZ8qNOM
-- Aula 22- https://www.youtube.com/watch?v=RVF52jm_pLY
+- [Aula 1](https://www.youtube.com/watch?v=KxppXrcfMBA)
+- [Aula 2](https://www.youtube.com/watch?v=O3ABat86ymk)
+- [Aula 3](https://www.youtube.com/watch?v=iDHArTzfAHI)
+- [Aula 4](https://www.youtube.com/watch?v=hsAIho4XYT4)
+- [Aula 5](https://www.youtube.com/watch?v=wBpgFKlTliI)
+- [Aula 6](https://www.youtube.com/watch?v=wV__IGMU5M8)
+- [Aula 7](https://www.youtube.com/watch?v=SGdD1y2jcPw)
+- [Aula 8](https://www.youtube.com/watch?v=xNrOqBs6TIo)
+- [Aula 9](https://www.youtube.com/watch?v=5kq749Eg0Q8)
+- [Aula 10](https://www.youtube.com/watch?v=8kjJCqJF9v8)
+- [Aula 11](https://www.youtube.com/watch?v=xLbk00136_0)
+- [Aula 12](https://www.youtube.com/watch?v=jAhuGG-n26E)
+- [Aula 13](https://www.youtube.com/watch?v=cVLpq0kxPxc)
+- [Aula 14](https://www.youtube.com/watch?v=SgUUhpDKAP0)
+- [Aula 15](https://www.youtube.com/watch?v=4G5jvlHSRts)
+- [Aula 16](https://www.youtube.com/watch?v=ARunwre3W9g)
+- [Aula 17](https://www.youtube.com/watch?v=jdEXsZ8qNOM)
+- [Aula 18](https://www.youtube.com/watch?v=RVF52jm_pLY)
 
-[**[ VOLTAR ]**](../../../../../README.md) <===> [**[ INICIO ]**](#inglês)
+<br>
+
+[**[ VOLTAR ]**](../../../../../README.md) <===> [**[ INICIO ]**](#pensamento-computacional)

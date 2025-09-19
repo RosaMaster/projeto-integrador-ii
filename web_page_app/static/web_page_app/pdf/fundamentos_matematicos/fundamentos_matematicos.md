@@ -37,3 +37,7 @@ Conceitos básicos de matemática discreta e de lógica para computação. Técn
 - [Aula 18](https://www.youtube.com/watch?v=VnFP1IdWO0E)
 - [Aula 19](https://www.youtube.com/watch?v=Ngu5iPqySmY)
 - [Aula 20](https://www.youtube.com/watch?v=ahx8AqYLxZM)
+
+<br>
+
+[**[ VOLTAR ]**](../../../../../README.md) <===> [**[ INICIO ]**](#fundamentos-matemáticos)
