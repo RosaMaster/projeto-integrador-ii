@@ -49,7 +49,7 @@ class Disciplina(models.Model):
     nome = models.CharField(max_length=100)                                                             # Nome da disciplina
     carga_horaria = models.PositiveIntegerField(verbose_name='Carga Horaria')                           # Carga horária da disciplina
     descricao = models.TextField(verbose_name='Descricao')                                              # Descrição da disciplina
-    quantidade_aulas_semanais = models.PositiveIntegerField(verbose_name='Quantidade Aulas Semanais')   # Quantidade de aulas semanais
+    quantidade_aulas_semanais = models.PositiveIntegerField(verbose_name='Quantidade Aulas Semanais', default=1)   # Quantidade de aulas semanais, valor padrão '1' para compatibilidade com registros antigos
 
     def __str__(self):
         return self.nome
