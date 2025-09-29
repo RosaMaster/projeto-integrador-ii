@@ -11,7 +11,7 @@ class Curso(models.Model):
         return self.nome
 
 
-class Consumidor(models.Model):
+class Consumidor(models.Model): # Sugestão alterar nome para aluno ou usuario.
     registro_academico = models.CharField(primary_key=True, unique=True, max_length=20)
     nome = models.CharField(max_length=150)
     email = models.EmailField(unique=True, max_length=150)
