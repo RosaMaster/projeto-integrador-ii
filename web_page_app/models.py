@@ -63,7 +63,7 @@ class Categoria(models.Model):
         return self.nome
 
 
-class Transacao(models.Model):
+class Transacao(models.Model):                         # o que seria transação?
     data = models.DateTimeField(auto_created=True)
     descricao = models.CharField(max_length=200)
     valor = models.DecimalField(max_digits=10, decimal_places=2)
