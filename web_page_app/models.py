@@ -11,7 +11,7 @@ class Curso(models.Model):
         return self.nome
 
 
-class Consumidor(models.Model): # Sugestão alterar nome para aluno ou usuario.
+class Consumidor(models.Model):  # Sugestão alterar nome para aluno ou usuario.
     registro_academico = models.CharField(primary_key=True, unique=True, max_length=20)
     nome = models.CharField(max_length=150)
     email = models.EmailField(unique=True, max_length=150)
@@ -63,7 +63,7 @@ class Categoria(models.Model):
         return self.nome
 
 
-class Transacao(models.Model):                         # o que seria transação?
+class Transacao(models.Model):      # o que seria transação?
     data = models.DateTimeField(auto_created=True)
     descricao = models.CharField(max_length=200)
     valor = models.DecimalField(max_digits=10, decimal_places=2)
