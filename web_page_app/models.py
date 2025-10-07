@@ -12,9 +12,9 @@ class Curso(models.Model):
 
 
 class Consumidor(models.Model):
-    registro_academico = models.CharField(primary_key=True, unique=True, max_length=20)
+    registro_academico = models.CharField(primary_key=True, unique=True, max_length=20, db_index=True)
     nome = models.CharField(max_length=150)
-    email = models.EmailField(unique=True, max_length=150)
+    email = models.EmailField(unique=True, max_length=150, db_index=True)
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
     senha = models.CharField(max_length=30)
     data_insercao = models.DateTimeField(auto_now_add=True)
