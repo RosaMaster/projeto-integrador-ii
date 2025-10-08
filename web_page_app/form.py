@@ -7,6 +7,16 @@ class TransacaoForm(ModelForm):
         model = Transacao
         fields = ['data', 'descricao', 'valor', 'categoria', 'observacoes']
 
+class LoginConsumidorForm(forms.Form):
+    username = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label="Usuário"
+    )
+    password = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        label="Senha"
+    )
+
 class CadastroConsumidorForm(ModelForm):
     senha = forms.CharField(
         widget=forms.PasswordInput(attrs={'class': 'form-control'}),

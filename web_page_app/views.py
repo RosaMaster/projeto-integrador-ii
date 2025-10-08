@@ -4,27 +4,49 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 from django.http import HttpResponse
-from .models import Transacao
+from .models import Transacao, Consumidor
 from datetime import datetime
-from .form import TransacaoForm, CadastroConsumidorForm
+from .form import TransacaoForm, CadastroConsumidorForm, LoginConsumidorForm
 
 # View para a página de Login
 def login_view(request):
+    #####################################################################
     if request.method == 'POST':
-        form = AuthenticationForm(data=request.POST)
+        form = LoginConsumidorForm(data=request.POST)
         if form.is_valid():
-            user = form.get_user()
-            login(request, user)
-            return redirect('conteudo')
+            registro_academico = form.cleaned_data.get('username')
+            senha = form.cleaned_data.get('password')
+            consumidor = Consumidor.objects.get(pk=registro_academico)
+            #consumidor = Consumidor.objects.filter(pk=registro_academico).first()
+            if consumidor.senha == senha:
+                # Autenticado com sucesso
+                request.session['consumidor_id'] = consumidor.pk
+                return redirect('conteudo')
     else:
-        form = AuthenticationForm()
+        form = LoginConsumidorForm()
     return render(request, 'web_page_app/login.html', {'form': form})
+    #####################################################################
+    # if request.method == 'POST':
+    #     form = AuthenticationForm(data=request.POST)
+    #     if form.is_valid():
+    #         user = form.get_user()
+    #         login(request, user)
+    #         return redirect('conteudo')
+    # else:
+    #     form = AuthenticationForm()
+    # return render(request, 'web_page_app/login.html', {'form': form})
 
-# View para a página de Cadastro
+
 def home_view(request):
     data = {}
 
     return render(request, 'web_page_app/home.html', data)
+
+
+def home_interno_view(request):
+    data = {}
+
+    return render(request, 'web_page_app/home_interno.html', data)
 
 
 # View para a página de Cadastro
@@ -58,6 +80,11 @@ def conteudo_view(request):
 # View para a página de Política e Termos de Uso
 def politica_termos_view(request):
     return render(request, 'web_page_app/politica_termos.html')
+
+
+# View para a página de Política e Termos de Uso
+def politica_termos_uso_interno_view(request):
+    return render(request, 'web_page_app/politica_termos_uso_interno.html')
 
 
 # View para fazer o logout
