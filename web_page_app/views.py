@@ -11,30 +11,30 @@ from .form import TransacaoForm, CadastroConsumidorForm, LoginConsumidorForm
 # View para a página de Login
 def login_view(request):
     #####################################################################
-    if request.method == 'POST':
-        form = LoginConsumidorForm(data=request.POST)
-        if form.is_valid():
-            registro_academico = form.cleaned_data.get('username')
-            senha = form.cleaned_data.get('password')
-            consumidor = Consumidor.objects.get(pk=registro_academico)
-            #consumidor = Consumidor.objects.filter(pk=registro_academico).first()
-            if consumidor.senha == senha:
-                # Autenticado com sucesso
-                request.session['consumidor_id'] = consumidor.pk
-                return redirect('conteudo')
-    else:
-        form = LoginConsumidorForm()
-    return render(request, 'web_page_app/login.html', {'form': form})
-    #####################################################################
     # if request.method == 'POST':
-    #     form = AuthenticationForm(data=request.POST)
+    #     form = LoginConsumidorForm(data=request.POST)
     #     if form.is_valid():
-    #         user = form.get_user()
-    #         login(request, user)
-    #         return redirect('conteudo')
+    #         registro_academico = form.cleaned_data.get('username')
+    #         senha = form.cleaned_data.get('password')
+    #         consumidor = Consumidor.objects.get(pk=registro_academico)
+    #         #consumidor = Consumidor.objects.filter(pk=registro_academico).first()
+    #         if consumidor.senha == senha:
+    #             # Autenticado com sucesso
+    #             request.session['consumidor_id'] = consumidor.pk
+    #             return redirect('conteudo')
     # else:
-    #     form = AuthenticationForm()
+    #     form = LoginConsumidorForm()
     # return render(request, 'web_page_app/login.html', {'form': form})
+    #####################################################################
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('conteudo')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'web_page_app/login.html', {'form': form})
 
 
 def home_view(request):
